@@ -1,4 +1,5 @@
 from appium import webdriver
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -27,3 +28,18 @@ driver.find_element(By.ID, "flipboard.app:id/topic_picker_continue_button").clic
 driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continue")').click()
 driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continue")').click()
 driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Skip for Now")').click()
+
+sl.sleep(2)
+
+ScrollUtil.swipeUp(4, driver)
+sl.sleep(2)
+
+ScrollUtil.swipeDown(4, driver)
+sl.sleep(2)
+
+
+ScrollUtil.swipeLeft(2, driver)
+sl.sleep(2)
+
+ScrollUtil.swipeRight(2, driver)
+sl.sleep(2)
