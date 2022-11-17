@@ -21,4 +21,9 @@ driver.find_element(By.ID, "flipboard.app:id/first_launch_get_started_button").c
 driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")[0].click()
 driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")[1].click()
 driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")[2].click()
+driver.find_element(By.ID, "flipboard.app:id/topic_picker_continue_button").click()
 
+# Using UIAutomator(Java Function)
+driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continue")').click()
+driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continue")').click()
+driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Skip for Now")').click()
