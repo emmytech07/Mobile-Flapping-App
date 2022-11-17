@@ -21,7 +21,18 @@ driver.find_element(By.ID, "flipboard.app:id/first_launch_get_started_button").c
 
 driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")[0].click()
 driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")[1].click()
-driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")[2].click()
+
+# Using TouchAction for the third click
+elements = driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")
+print(len(elements))
+actions = TouchAction(driver)
+actions.tap(elements[2]).perform()
+
+# Move TouchAction
+# elements = driver.find_elements_by_id('com.mobeta.android.demodslv:id/drag_handle')
+# actions = TouchAction(driver)
+# actions.press(elements[0]).wait(3000).move_to(elements[3]).perform().release()
+
 driver.find_element(By.ID, "flipboard.app:id/topic_picker_continue_button").click()
 
 # Using UIAutomator(Java Function)
@@ -29,17 +40,18 @@ driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Contin
 driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continue")').click()
 driver.find_element(AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Skip for Now")').click()
 
-sl.sleep(2)
 
-ScrollUtil.swipeUp(4, driver)
-sl.sleep(2)
-
-ScrollUtil.swipeDown(4, driver)
-sl.sleep(2)
-
-
-ScrollUtil.swipeLeft(2, driver)
-sl.sleep(2)
-
-ScrollUtil.swipeRight(2, driver)
-sl.sleep(2)
+# sl.sleep(2)
+#
+# ScrollUtil.swipeUp(4, driver)
+# sl.sleep(2)
+#
+# ScrollUtil.swipeDown(4, driver)
+# sl.sleep(2)
+#
+#
+# ScrollUtil.swipeLeft(2, driver)
+# sl.sleep(2)
+#
+# ScrollUtil.swipeRight(2, driver)
+# sl.sleep(2)
