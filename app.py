@@ -26,6 +26,8 @@ driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")
 elements = driver.find_elements(By.ID, "flipboard.app:id/topic_picker_topic_row_topic_tag")
 print(len(elements))
 actions = TouchAction(driver)
+a = TouchAction(driver)
+
 actions.tap(elements[2]).perform()
 
 # Move TouchAction
